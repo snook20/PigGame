@@ -15,11 +15,13 @@ import android.util.Log;
  */
 public class PigLocalGame extends LocalGame {
 
+    PigGameState state;
+
     /**
      * This ctor creates a new game state
      */
     public PigLocalGame() {
-        //TODO  You will implement this constructor
+        this.state = new PigGameState();
     }
 
     /**
@@ -27,7 +29,9 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean canMove(int playerIdx) {
-        //TODO  You will implement this method
+        if (playerIdx == state.getCurrentPlayerID()) {
+            return true;
+        }
         return false;
     }
 
@@ -38,8 +42,18 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean makeMove(GameAction action) {
-        //TODO  You will implement this method
+        if (action instanceof PigHoldAction){
+            state.endTurn(true);
+            return true;
+        }
+        else if (action instanceof PigRollAction) {
+            if (state.roll() == 1) {
+                state.endTurn(false);
+                return true;
+            }
+        }
         return false;
+
     }//makeMove
 
     /**
@@ -47,7 +61,8 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected void sendUpdatedStateTo(GamePlayer p) {
-        //TODO  You will implement this method
+        p.sendInfo(new PigGameState(state));
+
     }//sendUpdatedSate
 
     /**
@@ -59,7 +74,15 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected String checkIfGameOver() {
-        //TODO  You will implement this method
+
+        if (state.getPlayerOneScore() >= 50 ) {
+            String winner = playerNames[0];
+            return winner+": "+state.getPlayerOneScore();
+        }
+        else if (state.getPlayerTwoScore() >= 50){
+            String winner = playerNames[1];
+            return winner+": "+state.getPlayerTwoScore();
+        }
         return null;
     }
 
