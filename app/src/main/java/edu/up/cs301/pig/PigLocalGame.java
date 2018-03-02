@@ -7,6 +7,8 @@ import edu.up.cs301.game.infoMsg.GameState;
 
 import android.util.Log;
 
+import static android.content.ContentValues.TAG;
+
 /**
  * class PigLocalGame controls the play of the game
  *
@@ -43,8 +45,11 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean makeMove(GameAction action) {
         if (action instanceof PigHoldAction){
+            //todo fuck my life
             state.endTurn(true);
+            Log.i(TAG, "bob: ");
             return true;
+
         }
         else if (action instanceof PigRollAction) {
             if (state.roll() == 1) {
@@ -75,13 +80,13 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected String checkIfGameOver() {
 
-        if (state.getPlayerOneScore() >= 50 ) {
+        if (state.getScore(0) >= 50 ) {
             String winner = playerNames[0];
-            return winner+": "+state.getPlayerOneScore();
+            return winner+": "+state.getScore(0);
         }
-        else if (state.getPlayerTwoScore() >= 50){
+        else if (state.getScore(1) >= 50){
             String winner = playerNames[1];
-            return winner+": "+state.getPlayerTwoScore();
+            return winner+": "+state.getScore(1);
         }
         return null;
     }

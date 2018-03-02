@@ -60,7 +60,40 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      */
     @Override
     public void receiveInfo(GameInfo info) {
-        //TODO You will implement this method to receive state objects from the game
+        if(!(info instanceof PigGameState)) {
+            //flash(0xFFFF00FF, 50);
+            return;
+        }
+        PigGameState state = (PigGameState) info;
+
+        playerScoreTextView.setText(""+state.getScore(playerNum));
+
+        oppScoreTextView.setText(""+state.getScore( Math.abs(playerNum-1)));
+
+        turnTotalTextView.setText(""+state.getRunningTotal());
+
+        switch(state.getCurrentDieVal()){
+            case 1:
+                dieImageButton.setImageResource(R.drawable.face1);
+                break;
+            case 2:
+                dieImageButton.setImageResource(R.drawable.face2);
+                break;
+            case 3:
+                dieImageButton.setImageResource(R.drawable.face3);
+                break;
+            case 4:
+                dieImageButton.setImageResource(R.drawable.face4);
+                break;
+            case 5:
+                dieImageButton.setImageResource(R.drawable.face5);
+                break;
+            case 6:
+                dieImageButton.setImageResource(R.drawable.face6);
+                break;
+        }
+
+
     }//receiveInfo
 
     /**
@@ -71,7 +104,12 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      * 		the button that was clicked
      */
     public void onClick(View button) {
-        //TODO  You will implement this method to send appropriate action objects to the game
+        if( button == holdButton ){
+            game.sendAction(new PigHoldAction(this));
+        }
+        else if( button == dieImageButton){
+            game.sendAction(new PigRollAction(this));
+        }
     }// onClick
 
     /**

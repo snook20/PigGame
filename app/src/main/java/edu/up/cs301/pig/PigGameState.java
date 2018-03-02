@@ -14,7 +14,7 @@ public class PigGameState extends GameState{
     private int currentDieVal;
 
     public PigGameState(){
-        currentPlayerID= 1;
+        currentPlayerID= 0;
         playerOneScore= 0;
         playerTwoScore= 0;
         runningTotal= 0;
@@ -49,25 +49,7 @@ public class PigGameState extends GameState{
         return currentDieVal;
     }
 
-    public void setCurrentPlayerID(int currentPlayerID) {
-        this.currentPlayerID = currentPlayerID;
-    }
 
-    public void setPlayerOneScore(int playerOneScore) {
-        this.playerOneScore = playerOneScore;
-    }
-
-    public void setPlayerTwoScore(int playerTwoScore) {
-        this.playerTwoScore = playerTwoScore;
-    }
-
-    public void setRunningTotal(int runningTotal) {
-        this.runningTotal = runningTotal;
-    }
-
-    public void setCurrentDieVal(int currentDieVal) {
-        this.currentDieVal = currentDieVal;
-    }
 
     //when player ends turn, adds running total to player's score
     public void endTurn (boolean hold) {
@@ -89,5 +71,10 @@ public class PigGameState extends GameState{
         currentDieVal = (int)(Math.random()*6+1);
         runningTotal += currentDieVal;
         return runningTotal;
+    }
+    public int getScore( int playerID){
+        if(playerID == 0 ) return playerOneScore;
+        if(playerID == 1 ) return playerTwoScore;
+        else return -1;
     }
 }
