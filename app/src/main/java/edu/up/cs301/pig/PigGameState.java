@@ -7,7 +7,7 @@ package edu.up.cs301.pig;
  */
 
 public class PigGameState extends GameState{
-    int playerID;
+    int currentPlayerID;
     int playerOneScore;
     int playerTwoScore;
     int runningTotal;
