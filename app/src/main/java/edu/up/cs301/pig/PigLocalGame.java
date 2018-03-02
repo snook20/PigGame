@@ -48,16 +48,18 @@ public class PigLocalGame extends LocalGame {
             //todo fuck my life
             state.endTurn(true);
             Log.i(TAG, "bob: ");
-            return true;
 
         }
         else if (action instanceof PigRollAction) {
             if (state.roll() == 1) {
                 state.endTurn(false);
-                return true;
+
             }
         }
-        return false;
+        else{
+            return false;
+        }
+        return true;
 
     }//makeMove
 
