@@ -45,22 +45,16 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean makeMove(GameAction action) {
         if (action instanceof PigHoldAction){
-            //todo fuck my life
             state.endTurn(true);
-            Log.i(TAG, "bob: ");
-
+            return true;
         }
-        else if (action instanceof PigRollAction) {
+        if (action instanceof PigRollAction) {
             if (state.roll() == 1) {
                 state.endTurn(false);
-
             }
+            return true;
         }
-        else{
-            return false;
-        }
-        return true;
-
+        return false;
     }//makeMove
 
     /**

@@ -4,6 +4,10 @@
         "source": "P:\\Spring 2018\\CS371PigGameStarter-master\\app\\src\\main\\res\\menu\\game_main.xml"
     },
     {
+        "merged": "C:\\Users\\snook\\Desktop\\PigGame\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
+        "source": "C:\\Users\\snook\\Desktop\\PigGame\\app\\src\\main\\res\\menu\\game_main.xml"
+    },
+    {
         "merged": "C:\\Users\\thoma20\\Downloads\\PigGame\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
         "source": "C:\\Users\\thoma20\\Downloads\\PigGame\\app\\src\\main\\res\\menu\\game_main.xml"
     }

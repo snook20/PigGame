@@ -70,7 +70,7 @@ public class PigGameState extends GameState{
     public int roll (){
         currentDieVal = (int)(Math.random()*6+1);
         runningTotal += currentDieVal;
-        return runningTotal;
+        return currentDieVal;
     }
     public int getScore( int playerID){
         if(playerID == 0 ) return playerOneScore;

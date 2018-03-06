@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\thoma20\Downloads\PigGame\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\thoma20\Downloads\PigGame\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a2963ce9e8745a2b4062300e69a3d2380ed7e73b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\AndroidSDK\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jar="C:\Users\snook\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="C:\Users\thoma20\Downloads\PigGame\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_bf6372499ab7d9c7586f81e3c8610d4c63b58b3f\classes.dex" />
+        <dex dex="C:\Users\snook\Desktop\PigGame\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_2c398b25daebd25a497ef42a3c03a9ece58326da\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\thoma20\Downloads\PigGame\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\snook\Desktop\PigGame\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="580c49f2b1e88fd2c5242806184cddac4d8b5260">
-        <dex dex="C:\Users\thoma20\Downloads\PigGame\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_bf68d5c5adb886efbec877c8b49f214823078722\classes.dex" />
+        sha1="e7bf1453a9b9b8d3940363b68affceff2e7f1ff3">
+        <dex dex="C:\Users\snook\Desktop\PigGame\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3190de422f513b01ba3f8dc5ad00484f01e2e91b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\snook\Desktop\PigGame\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\snook\Desktop\PigGame\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_6c485c51f2371d88dd90a357faf62168422de644\classes.dex" />
     </item>
 
 </items>
